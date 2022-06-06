@@ -1,17 +1,25 @@
 const React = require('react')
 
 function Default(html) {
-  return (
-    <html>
+    return (
+      <html>
       <head>
-        <title>{html.title || 'Default'} </title>
+        <title>{html.title || 'Default'}</title>
+        <link rel="stylesheet" href="/main.css"/>
+        <link rel="stylesheet" href="/main.css"/>
       </head>
       <body>
-        <h1>HTML working!</h1>
+        <div className="wrapper">
+          <header>
+            <h1><a href="/breads">BreadCRUD</a></h1>
+          </header>
+          <div className="container">
             {html.children}
+          </div>
+        </div>
       </body>
-    </html>
-  )
-}
+      </html>
+    )
+  }
 
 module.exports = Default
